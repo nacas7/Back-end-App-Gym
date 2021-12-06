@@ -1,0 +1,40 @@
+extends  ../layout
+
+block content 
+    h2 Lista clientes
+    button#btnProfesores.btn.btn-warning Recuperar profesores 
+    table.table.table-dark.table-striped
+        ul 
+            thead  
+                tr 
+                    td.scope.col Nombre
+                    td.scope.col Apellidos 
+                    td.scope.col Dirección 
+                    td.scope.col Email 
+                    td.scope.col Edad 
+                    td.scope.col Sexo 
+                    td.scope.col Cuota 
+
+            thbody 
+                each cliente in arrClientes
+                    tr 
+                        td.scope.col= cliente.nombre
+                        td.scope.col= cliente.apellidos
+                        td.scope.col= cliente.direccion
+                        td.scope.col= cliente.email
+                        td.scope.col= cliente.edad
+                        td.scope.col= cliente.sexo
+                        td.scope.col= cliente.cuota
+                        td 
+                            a.btn.btn-light(href='/clientes/'+ cliente.id) Información
+                            a.btn.btn-danger(href='/clientes/delete/'+ cliente.id onclick="return confirm('¿Estás seguro de eleminar?')") Eliminar
+    script.
+        document.getElementById('btnProfesores')
+            .addEventListener('click',()=>{
+                fetch('/api/profesores')
+                    .then(response =>response.json())
+                    .then(json =>{
+                        console.log(json);
+
+                    })
+            })

@@ -1,0 +1,36 @@
+extends ../layout
+//-IMPORTANTE ACTION Y METHOD DEL FORMULARIO, con estas etiquetas se genera si o si una petición POST donde yo genero el formulario
+block content 
+    p Nuevo CLIENTE
+    form(action="/clientes/create", method="POST")
+        .form-group
+            label.form-label Nombre
+            input.form-control(type="text", name="nombre")
+        .form-group
+            label.form-label Apellidos
+            input.form-control(type="text", name="apellidos")
+        .form-group
+            label.form-label Dirección
+            input.form-control(type="text", name="direccion")
+        .form-group
+            label.form-label Edad
+            input.form-control(type="text", name="edad")
+        .form-group
+            label.form-label Sexo
+            input.form-control(type="text", name="sexo")
+        .form-group
+            label.form-label Cuota
+            input.form-control(type="text", name="cuota")
+        .form-group
+            label.form-label Fecha Nacimiento
+            input.form-control(type="text", name="fecha_nacimiento")
+        .form-group
+            label.form-label DNI
+            input.form-control(type="text", name="dni")
+        .form-group
+            label.form-label Email
+            input.form-control(type="text", name="email")
+        input.btn.btn-dark(type="submit", value="Enviar")
+        
+
+

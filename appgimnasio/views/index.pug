@@ -1,0 +1,49 @@
+//-le tenemos que decir que fichero va a ser su base
+extends layout.pug 
+
+//-meto todo lo que quiero que se muestre en el block content y le doy a una tabulación 
+block content 
+  //-en pug no hay etiquetas de apertura y cierre
+  h1 Cabecera de la página 
+  h2 Esto es un h2
+  div 
+    p contenido 
+    a(href="http://google.es") google.es 
+
+  div 
+    p(class="parrafo") párrafo uno 
+    p.parrafo(id="segundo") párrafo dos 
+    p#tercero.parrafo párrafo 3
+
+  //-el contenido de mi párrafo es exactamente el valor de esta variable
+  div 
+    p= title 
+    p(class=clases) Mi título es: #{title}
+  section 
+    article 
+      h3 Artículo 
+      p 
+      | Contenido línea 1 
+      br
+      | Contenido línea 2
+
+  //-Con el guión - metes código JS
+  //- div
+  //-   ul 
+  //-     - for(let i = 0 ; i<animales.length; i++) 
+  //-       li= animales[i] 
+
+  //- div
+  //-   ul 
+  //-   each animal in animales esto es un un for of
+  //-     li= animal
+  //-   else
+  //-     li no hay animales 
+
+block footer 
+  p copyright @ 2021
+
+
+
+
+

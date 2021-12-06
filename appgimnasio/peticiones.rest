@@ -1,0 +1,108 @@
+POST http://localhost:3000/api/clientes
+Content-Type: application/json
+
+{
+    "nombre": "Maria",
+    "apellidos": "Sanchez",
+    "direccion": "Villarino de los aires",
+    "email": "ms@gmail.com",
+    "edad": 24, 
+    "sexo": "M",
+    "fecha_inscripcion": "2021-11-22",
+    "cuota": 16.90,
+    "fecha_nacimiento": "1997-05-10",
+    "dni": "517775436M"
+}
+
+###
+
+GET http://localhost:3000/api/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjcsImV4cGlyZWRBdCI6MTYzODE4Mjc1MSwiaWF0IjoxNjM3NzUwNzUxfQ.hJDNxG817i6swfV3MDYmwlLA6xMRrkXJxADK3gfS3vc
+
+
+###
+POST http://localhost:3000/api/profesores
+Content-Type: application/json
+
+{
+    "nombre": "Isabel",
+    "experiencia": 4
+}
+
+###
+
+
+GET http://localhost:3000/api/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjksImV4cGlyZWRBdCI6MTYzODYyMjU2NiwiaWF0IjoxNjM4MTkwNTY2fQ.Dx_zJcttRr_9YWwzQKwcoSXAFNVlPRDdNsiMhndLkgk
+
+###
+GET http://localhost:3000/api/profesores/7
+
+
+
+###
+DELETE http://localhost:3000/api/profesores/700
+
+###
+GET http://localhost:3000/api/profesores/14
+
+
+###
+GET http://localhost:3000/api/profesores/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjksImV4cGlyZWRBdCI6MTYzODYyMjU2NiwiaWF0IjoxNjM4MTkwNTY2fQ.Dx_zJcttRr_9YWwzQKwcoSXAFNVlPRDdNsiMhndLkgk
+
+
+###
+PUT http://localhost:3000/api/clientes/34
+Content-Type: application/json
+
+{
+    "nombre": "Julia",
+    "apellidos": "Sanchez",
+    "direccion": "Calle barco 34",
+    "email": "jl@gmail.com",
+    "edad": 34, 
+    "sexo": "F",
+    "cuota": 16.90,
+    "dni": "56773917M"
+}
+
+
+### 
+PUT http://localhost:3000/api/profesores/21
+Content-Type: application/json
+
+{
+    "nombre":"Rosalía",
+    "experiencia": 1
+}
+
+
+###
+POST http://localhost:3000/api/usuarios/registro
+Content-Type: application/json
+
+{
+    "nombre": "sh2",
+    "username": "sh3",
+    "email": "sheila@gmail.com",
+    "password": "olakase20"
+}
+
+
+###
+POST http://localhost:3000/api/usuarios/login
+Content-Type: application/json
+
+{
+    "email":"sheila@gmail.com",
+    "password":"olakase20"
+}
+
+###
+GET http://localhost:3000/api/usuarios/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjksImV4cGlyZWRBdCI6MTYzODYyMjU2NiwiaWF0IjoxNjM4MTkwNTY2fQ.Dx_zJcttRr_9YWwzQKwcoSXAFNVlPRDdNsiMhndLkgk
+
+###
+GET http://localhost:3000/api/usuarios/clientes
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c3VhcmlvSWQiOjksImV4cGlyZWRBdCI6MTYzODYyMjU2NiwiaWF0IjoxNjM4MTkwNTY2fQ.Dx_zJcttRr_9YWwzQKwcoSXAFNVlPRDdNsiMhndLkgk
